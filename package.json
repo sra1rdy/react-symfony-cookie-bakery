@@ -15,6 +15,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@bootstrap-styled/provider": "^2.0.2",
         "@bootstrap-styled/v4": "^3.4.0",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",

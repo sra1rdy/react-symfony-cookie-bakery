@@ -1,3 +1,11 @@
+/* @import-normalize; */
+
+
+
 body {
-    background-color: lightgray;
+    background-color: white;
+}
+
+.test{
+    left: 300px;
 }

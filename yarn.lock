@@ -941,6 +941,18 @@
     "@bootstrap-styled/css-mixins" "^2.1.2"
     "@bootstrap-styled/utils" "^1.8.1"
 
+"@bootstrap-styled/provider@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@bootstrap-styled/provider/-/provider-2.0.2.tgz#0f8d518f2ee09b647d443ce6a5cf4ea592061fb5"
+  integrity sha512-0em6SNC84PlrX1mlHtDp33cPsIQMxwxuh6y8qv9PAFyrKqFT0sBnUFUO2q/jDec954lOpls1D9uVuqj+CxlJ8A==
+  dependencies:
+    "@bootstrap-styled/css-mixins" "^2.1.2"
+    "@bootstrap-styled/css-utils" "^1.4.0"
+    bootstrap-styled "^2.7.1"
+    classnames "^2.2.6"
+    prop-types "^15.7.2"
+    react-transition-group "^2.5.1"
+
 "@bootstrap-styled/utils@^1.8.1":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@bootstrap-styled/utils/-/utils-1.8.1.tgz#f1686af5860c4330017442912239342d7181de25"
@@ -1628,7 +1640,7 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap-styled@^2.7.2:
+bootstrap-styled@^2.7.1, bootstrap-styled@^2.7.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/bootstrap-styled/-/bootstrap-styled-2.7.2.tgz#4c85a97c79a09062315e94656c3f00ba7736c4e5"
   integrity sha512-4hZHh4mc7iB8Ewj8Bu6FeiGC8U2VH4tKoSwX1Xd3uy4sICP2RzGsqSMbScwrmRmoBFdX+3IjDJ3Je1/BP+1IZA==
@@ -5304,7 +5316,7 @@ react-portal@^4.2.1:
   dependencies:
     prop-types "^15.5.8"
 
-react-transition-group@^2.6.0:
+react-transition-group@^2.5.1, react-transition-group@^2.6.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.9.0.tgz#df9cdb025796211151a436c69a8f3b97b5b07c8d"
   integrity sha512-+HzNTCHpeQyl4MJ/bdE0u6XRMe9+XG/+aL4mCxVN4DnPBQ0/5bfHWPDuOZUzYdMj94daZaZdCCc1Dzt9R/xSSg==
