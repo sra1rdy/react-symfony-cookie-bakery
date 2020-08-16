@@ -1,11 +1,3 @@
-/* @import-normalize; */
 
+/* default css style sheet just for ref. However, global styles and normalized css provided through @bootstrap-styled reset css */
 
-
-body {
-    background-color: white;
-}
-
-.test{
-    left: 300px;
-}

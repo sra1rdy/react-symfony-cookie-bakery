@@ -1,19 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Button } from "@bootstrap-styled/v4";
-import { useTheme, ThemeProvider} from "./context/ThemeContext";
+import { Container } from "@bootstrap-styled/v4";
+import { ThemeProvider } from "./context/ThemeContext";
+
+import ToggleButton from "./components/ToggleButton"
+
 
 import '../css/app.css';
 
 
+
+
 const App = () => {
-  const themeState = useTheme();
+ 
   return (
+     <Container>
+<ToggleButton></ToggleButton>
+        
+     </Container>
     
-      <Button onClick={() => themeState.toggle()}></Button>
    
   )
 }
 
 
-ReactDOM.render(<ThemeProvider> <App/> </ThemeProvider>, document.getElementById('root'));
+ReactDOM.render(<ThemeProvider> <App/> </ThemeProvider>, document.getElementById("root"));

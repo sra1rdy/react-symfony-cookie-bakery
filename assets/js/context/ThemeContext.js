@@ -4,6 +4,8 @@ import BootstrapProvider from '@bootstrap-styled/provider/lib/BootstrapProvider'
 
 import theme from "../theme.js";
 
+// const themeMode = theme("dark");
+// console.log(themeMode)
 
 const defaultThemeData = {
   dark: false,
@@ -50,11 +52,11 @@ const toggle = () => {
 };
 
 
-const activatedTheme = themeState.dark ? theme("dark") : theme("light");
+const activeTheme = themeState.dark ? theme("dark") : theme("light");
 
 
   return (
-    <BootstrapProvider theme={activatedTheme} reset={true} >
+    <BootstrapProvider theme={activeTheme} reset={true} >
     <ThemeContext.Provider
         value={{
           dark: themeState.dark,
