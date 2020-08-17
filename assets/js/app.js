@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Open-Sans, Helvetica, Sans-Serif;
     background: ${props => props.theme.background};
   }
-  * {
+  *, *::before, *::after {
     box-sizing: border-box;
   }
 `;
@@ -29,7 +29,6 @@ const Wrapper = styled.div`
 
 
 const App = () => {
- 
   return (
     <Fragment>
       <GlobalStyle />

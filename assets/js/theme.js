@@ -8,13 +8,15 @@ const themeLight = {
   background: white,
   toggleBtnColor: yellow,
   toggleBtnBorder: white,
+  badgeText: black
   
 };
 
 const themeDark = {
   background: black,
   toggleBtnColor : white,
-  toggleBtnBorder: black
+  toggleBtnBorder: black,
+  badgeText: white
 };
 
 const theme = mode => (mode === "dark" ? themeDark : themeLight);
