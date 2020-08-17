@@ -6,7 +6,6 @@ import ToggleButton from "./components/ToggleButton";
 import CookieBakery from "./components/CookieBakery";
 import 'bootstrap/dist/css/bootstrap.css';
 
-import '../css/app.css';
 
 const GlobalStyle = createGlobalStyle`
   body {

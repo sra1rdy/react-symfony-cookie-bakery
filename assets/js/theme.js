@@ -1,22 +1,20 @@
 
-const white = '#FFFFFF';
-const black = '#161617';
-const yellow = '#f7f42f';
+import { colors } from "./colors.js";
 
 
 const themeLight = { 
-  background: white,
-  toggleBtnColor: yellow,
-  toggleBtnBorder: white,
-  badgeText: black
+  background: colors.white,
+  toggleBtnColor: colors.yellow,
+  toggleBtnBorder: colors.white,
+  badgeText: colors.black
   
 };
 
 const themeDark = {
-  background: black,
-  toggleBtnColor : white,
-  toggleBtnBorder: black,
-  badgeText: white
+  background: colors.black,
+  toggleBtnColor : colors.white,
+  toggleBtnBorder: colors.black,
+  badgeText: colors.white
 };
 
 const theme = mode => (mode === "dark" ? themeDark : themeLight);
