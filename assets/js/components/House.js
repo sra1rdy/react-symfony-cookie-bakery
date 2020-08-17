@@ -122,14 +122,6 @@ const BakeryDoor = styled.button`
     background: ${colors.grayLight};
     `;
     
-
-
-
-
-
-
-
-
 const  House = () => {
     const themeState = useTheme(); 
 

@@ -41,10 +41,6 @@ const BadgeHeader = styled(H3)`
   opacity: 0.9;
 }`;
 
-
-
-  
-
     
 
 
