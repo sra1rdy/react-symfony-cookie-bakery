@@ -140,10 +140,36 @@ const  House = () => {
 
  }
 
+ const placeOrder = async () => {
+
+    const API_URI = 'http://127.0.0.1:8000/order';
+
+    const orderData = new Date().toLocaleString;
+
+    const postOrderResponse = await fetch(API_URI, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(orderData) });
+
+    let isOrderPlaced = postOrderResponse.ok ? true: false;
+
+    if (!isOrderPlaced) {
+        throw new Error('Network response was not ok');
+      }
+
+console.log(isOrderPlaced);
+
+    
+     
+ }
+
 
  const Door = () => {
      return (
-        <BakeryDoor>
+        <BakeryDoor onClick={() => placeOrder()}>
         <BakeryDoorHandle></BakeryDoorHandle>
         </BakeryDoor>
      )
