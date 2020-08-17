@@ -1,7 +1,8 @@
 
 import React from  "react";
 import styled from "styled-components";
-import { Button, Badge, H3 } from "@bootstrap-styled/v4"
+import { Badge, H3 } from "@bootstrap-styled/v4";
+import { useTheme } from "../context/ThemeContext";
 
 const red = '#fc0f03';
 
@@ -35,6 +36,7 @@ align-items: center;
 
 
 const BakeryBadge = styled(Badge)`
+font-size: 2rem;
 position: absolute;
 top: 42%;
 right: 40%;
@@ -47,23 +49,32 @@ const BakeryWindow = styled.button`
     border-radius: 50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
-    border:1px solid blue; 
-    background-color: white;
-    width: 100px;
-    height: 100px;
+    border:2px solid #4287f5; 
+    background: #95b7ed;
+    width: 75px;
+    height: 75px;
+
+    &:hover {
+        width: 75px;
+        height: 75px;
+        background-size: contain;
+        border: none;
+        background-image: url(https://i.pinimg.com/originals/eb/0b/f7/eb0bf7ca906e1178435abde1e6ad7007.jpg);
+        transition-delay: 0.5s;
+    }
     `;
 
 
     const BakeryWindowLeft = styled(BakeryWindow)`
     position: absolute;
     top: 1.5em;
-    left: .25em;
+    left: 1.5em;
     `;
 
     const BakeryWindowRight = styled(BakeryWindow)`
     position: absolute;
     top: 1.5em;
-    right: .25em;
+    right: 1.5em;
     `;
 
     const BakeryDoor = styled.button`
@@ -102,11 +113,12 @@ const BakeryWindow = styled.button`
 
 
 const CookieBakery = () => {
+    const themeState = useTheme();
 
     return (
 <HouseWrapper>
 <Roof className="mb-0"> </Roof>
-<BakeryBadge color="success" ><H3>Cookie Bakery</H3></BakeryBadge>
+<BakeryBadge color="success" ><H3>{themeState.dark ? "Bakery Closed" : "Cookie Bakery"}</H3></BakeryBadge>
 <House></House>
 </HouseWrapper>
     )
