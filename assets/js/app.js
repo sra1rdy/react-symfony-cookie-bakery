@@ -1,23 +1,43 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import { Container } from "@bootstrap-styled/v4";
 import { ThemeProvider } from "./context/ThemeContext";
-
-import ToggleButton from "./components/ToggleButton"
-
+import styled, { createGlobalStyle } from "styled-components";
+import ToggleButton from "./components/ToggleButton";
+import CookieBakery from "./components/CookieBakery";
+import 'bootstrap/dist/css/bootstrap.css';
 
 import '../css/app.css';
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Open-Sans, Helvetica, Sans-Serif;
+    background: ${props => props.theme.background};
+  }
+  * {
+    box-sizing: border-box;
+  }
+`;
 
+
+const Wrapper = styled.div`
+  background: ${props => props.theme.background};
+  width: 100vw;
+  height: 100vh;
+  `;
 
 
 const App = () => {
  
   return (
-     <Container>
-<ToggleButton></ToggleButton>
-        
-     </Container>
+    <Fragment>
+      <GlobalStyle />
+     <Wrapper>
+  <ToggleButton></ToggleButton>
+  <CookieBakery></CookieBakery>
+     </Wrapper>
+    </Fragment>
     
    
   )

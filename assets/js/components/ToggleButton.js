@@ -1,27 +1,29 @@
 import React from "react";
-import { Button } from "@bootstrap-styled/v4";
 import { useTheme } from "../context/ThemeContext"
 import styled from "styled-components";
 
 
-
-const RoundButton = styled(Button)`
-
-    width: 150px;
-    height: 150px;
+const RoundButton = styled.button`
+    cursor: pointer;
     border-radius: 50%;
-
-    :hover {
-        color: blue;
-    }
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border:1px solid ${props => props.theme.toggleBtnBorder}; 
+    background-color: ${props => props.theme.toggleBtnColor};
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    top: 2%;
+    right: 30%;
 `;
 
 const ToggleButton = () => {
     const themeState = useTheme();
 
     return (
-        <RoundButton className="mr-4"  onClick={() => themeState.toggle()}></RoundButton>
-
+      
+           <RoundButton onClick={() => themeState.toggle()}></RoundButton>
+      
     )
 
 }
