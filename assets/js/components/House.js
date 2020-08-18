@@ -5,6 +5,10 @@ import { colors } from "../colors.js";
 
 
 
+
+
+
+
 const HouseFront = styled.div`
  position: absolute;
   height: 280px;
@@ -121,30 +125,39 @@ const BakeryDoor = styled.button`
     top: 1rem;
     background: ${colors.grayLight};
     `;
+
+
+
+let isOrderPlaced;
     
 const  House = () => {
+    
     const themeState = useTheme(); 
 
      return(
 <HouseFront themeState={themeState}>
- <BakeryWindowLeft></BakeryWindowLeft>
+ <BakeryWindowLeft />
  <Door></Door>
-  <BakeryWindowRight></BakeryWindowRight>
+  <BakeryWindowRight />
  <Mailbox>
  <MailboxWindow className="mb-1" ></MailboxWindow>
      <span>Mailbox</span>
  </Mailbox>
 </HouseFront>
      )
+    
 
 
  }
 
+ 
  const placeOrder = async () => {
 
     const API_URI = 'http://127.0.0.1:8000/order';
 
-    const orderData = new Date().toLocaleString;
+    const orderData =  {
+        orderTimestamp: Date().toLocaleString()
+    }
 
     const postOrderResponse = await fetch(API_URI, {
         method: 'POST',
@@ -154,23 +167,29 @@ const  House = () => {
         },
         body: JSON.stringify(orderData) });
 
-    let isOrderPlaced = postOrderResponse.ok ? true: false;
+  
+    isOrderPlaced = postOrderResponse.ok ? true: false;
 
     if (!isOrderPlaced) {
-        throw new Error('Network response was not ok');
+        console.log("order error");
       }
 
-console.log(isOrderPlaced);
+      console.log(orderData);
+      console.log(isOrderPlaced);
 
-    
+
      
  }
 
 
+
  const Door = () => {
+   
      return (
         <BakeryDoor onClick={() => placeOrder()}>
-        <BakeryDoorHandle></BakeryDoorHandle>
+           
+        <BakeryDoorHandle />
+        
         </BakeryDoor>
      )
  }

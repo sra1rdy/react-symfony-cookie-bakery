@@ -15,6 +15,7 @@ const RoundButton = styled.button`
     position: absolute;
     top: 2%;
     right: 30%;
+    z-index: 1000;
 `;
 
 const ToggleButton = () => {

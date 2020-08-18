@@ -4,8 +4,6 @@ import BootstrapProvider from '@bootstrap-styled/provider/lib/BootstrapProvider'
 
 import theme from "../theme.js";
 
-// const themeMode = theme("dark");
-// console.log(themeMode)
 
 const defaultThemeData = {
   dark: false,

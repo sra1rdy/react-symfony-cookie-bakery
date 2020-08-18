@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 use App\Entity\CookieOrder;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\{Request, JsonResponse};
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,7 +21,7 @@ class IndexController extends AbstractController
     }
 
 /**
- * @Route("/order", name="create_cookie_order")
+ * @Route("/order", name="order")
  * method to save cookie orders
  */
     public function createCookieOrder(ValidatorInterface $validator, Request $request): JsonResponse
@@ -31,12 +30,22 @@ class IndexController extends AbstractController
 
 
         $order = new CookieOrder();
-       
+
+
+        /** got null using this approach and looks like this is a known bug which is not yet resolved in httpfoundation 
+         * https://github.com/symfony/symfony/issues/24262
+        */
+        //  $requestBody = json_decode($request->getContent(), true);
+
+        $requestBody = $request->request->get('orderTimestamp');
+
+         
+
+      
         $currentOrderTime = new \DateTime();
 
         $order->setTimestamp($currentOrderTime);
-
-
+        
         $errors = $validator->validate($order);
 
         if (count($errors) > 0) {
@@ -53,9 +62,8 @@ class IndexController extends AbstractController
 
         $entityManager->flush();
 
-        return new JsonResponse(['order' => 'Order successfully saved with id '.$order->getId()], JsonResponse::HTTP_CREATED);
-
-
+        return new JsonResponse(['order' => 'Order successfully saved with id '.$order->getId(), 'order timestamp' => $currentOrderTime], 
+        JsonResponse::HTTP_CREATED);
     }
 
 
