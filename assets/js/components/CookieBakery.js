@@ -48,13 +48,13 @@ const CookieBakery = () => {
     const themeState = useTheme();
 
     return (
-<BakeryWrapper>
-<Roof className="mb-0"> </Roof>
-<BakeryBadge color="success" >
-    <BadgeHeader>{themeState.dark ? "Bakery Closed" : "Cookie Bakery"}</BadgeHeader>
-    </BakeryBadge>
-<House></House>
-</BakeryWrapper>
+    <BakeryWrapper>
+        <Roof className="mb-0"> </Roof>
+        <BakeryBadge color="success" >
+        <BadgeHeader>{themeState.dark ? "Bakery Closed" : "Cookie Bakery"}</BadgeHeader>
+        </BakeryBadge>
+        <House />
+    </BakeryWrapper>
     )
 
 }

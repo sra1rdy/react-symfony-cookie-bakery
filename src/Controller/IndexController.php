@@ -32,7 +32,7 @@ class IndexController extends AbstractController
         $order = new CookieOrder();
 
 
-        /** got null using this approach and looks like this is a known bug which is not yet resolved in httpfoundation 
+        /** Got null using this approach and looks like this is a known bug which is not yet resolved in httpfoundation 
          * https://github.com/symfony/symfony/issues/24262
         */
         //  $requestBody = json_decode($request->getContent(), true);
@@ -41,7 +41,7 @@ class IndexController extends AbstractController
 
          
 
-      
+      /** Another approach: On request from user to this URL, a time stamp is generated and saved */
         $currentOrderTime = new \DateTime();
 
         $order->setTimestamp($currentOrderTime);

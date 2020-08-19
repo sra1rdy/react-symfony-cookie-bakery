@@ -130,25 +130,7 @@ const BakeryDoor = styled.button`
 
 let isOrderPlaced;
     
-const  House = () => {
-    
-    const themeState = useTheme(); 
 
-     return(
-<HouseFront themeState={themeState}>
- <BakeryWindowLeft />
- <Door></Door>
-  <BakeryWindowRight />
- <Mailbox>
- <MailboxWindow className="mb-1" ></MailboxWindow>
-     <span>Mailbox</span>
- </Mailbox>
-</HouseFront>
-     )
-    
-
-
- }
 
  
  const placeOrder = async () => {
@@ -173,7 +155,7 @@ const  House = () => {
     if (!isOrderPlaced) {
         console.log("order error");
       }
-
+        /**A message like a toast can be shown based on the response */
       console.log(orderData);
       console.log(isOrderPlaced);
 
@@ -183,15 +165,36 @@ const  House = () => {
 
 
 
- const Door = () => {
-   
+ const Door = (props) => {
+
+   const isOrdered = props.orderDetails;
+
      return (
         <BakeryDoor onClick={() => placeOrder()}>
-           
-        <BakeryDoorHandle />
-        
+            <BakeryDoorHandle />
+        {/* {A toast can be implemented to notify the user about the order request he/she placed.} */}
         </BakeryDoor>
      )
+ }
+
+ const  House = () => {
+    
+    const themeState = useTheme(); 
+
+     return(
+    <HouseFront themeState={themeState}>
+        <BakeryWindowLeft />
+        <Door orderDetails={isOrderPlaced} />
+        <BakeryWindowRight />
+    <Mailbox>
+    <MailboxWindow className="mb-1" ></MailboxWindow>
+     <span>Mailbox</span>
+    </Mailbox>
+</HouseFront>
+     )
+    
+
+
  }
 
  export default House;

@@ -36,9 +36,6 @@ const ThemeProvider = ({ children }) => {
 
 const [themeState, setThemeState] = useEffectDarkMode();
 
-// if (!themeState.hasThemeMounted) {
-//   return <div />;
-// }
 
 const toggle = () => {
 
