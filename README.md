@@ -15,7 +15,7 @@ Install [Composer - dependecy manager for PHP](https://getcomposer.org/) and set
 ### Get the source code and install dependencies.
 
 ```
-$ git clone git@github.com:wkocjan/gatsby-contentful-portfolio.git
+$ git clone git@github.com:sra1rdy/react-symfony-cookie-bakery.git | https://github.com/sra1rdy/react-symfony-cookie-bakery.git
 $ composer install
 $ yarn install
 ```
@@ -51,7 +51,7 @@ $ php -S 127.0.0.1:8000 -t public | symfony server:start | php bin/console serve
  - [nelmioCorsBundle](https://github.com/nelmio/NelmioCorsBundle)
  
  
- ##[Stay Safe!] 
+ ##[Stay Safe!](https://sravan-reddy-jeedipelly-dev.netlify.app/)
  
  
  
