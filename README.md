@@ -30,6 +30,7 @@ Webpack-encore is used to watch and run the project. Also, start the server eith
 ```
 $ yarn dev
 $ php -S 127.0.0.1:8000 -t public | symfony server:start | php bin/console server:start
+```
 
 ### Extras
 
@@ -49,7 +50,8 @@ $ php -S 127.0.0.1:8000 -t public | symfony server:start | php bin/console serve
  - [Bootstrap-Styled](https://github.com/bootstrap-styled/v4) >> [Bootstrap](https://getbootstrap.com/) + [Styled Components](https://styled-components.com/)
  - [nelmioCorsBundle](https://github.com/nelmio/NelmioCorsBundle)
  
- ##Stay Safe! 
+ 
+ ##[Stay Safe!] 
  
  
  
