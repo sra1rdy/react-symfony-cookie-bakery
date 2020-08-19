@@ -1,7 +1,6 @@
 # react-symfony-cookie-bakery
 
-### A cookie bakery web app developed with [ReactJS](https://reactjs.org/) , [Symfony](https://symfony.com/), [Bootstrap](https://getbootstrap.com/), 
-[Webpack bundler](https://webpack.js.org/) and [SQLite](https://www.sqlite.org/index.html)
+### A cookie bakery web app developed with [ReactJS](https://reactjs.org/) , [Symfony](https://symfony.com/), [Bootstrap](https://getbootstrap.com/), [Webpack bundler](https://webpack.js.org/) and [SQLite](https://www.sqlite.org/index.html)
 
 ### Requirements
 
