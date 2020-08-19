@@ -10,7 +10,7 @@ To use this project, you need to setup the following environment.
 
 Install [NodeJs](https://nodejs.org/) and [Yarn package manager](https://yarnpkg.com/) (if you haven't already).
 
-Install [Composer - dependecy manager for PHP](https://getcomposer.org/) and setup [Symfony](https://symfony.com/doc/current/setup.html) (check for reuirements).
+Install [Composer - dependecy manager for PHP](https://getcomposer.org/) and setup [Symfony](https://symfony.com/doc/current/setup.html) (check for requirements).
 
 ### Get the source code and install dependencies.
 
