@@ -81,7 +81,7 @@ const BakeryDoor = styled.button`
     const animateDrop = keyframes`{
         from {
             top: 9rem;
-            transform: translateY(100%);#a4aba6
+            transform: translateY(100%);
             opacity: 1;
         }
         to {
