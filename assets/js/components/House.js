@@ -4,25 +4,15 @@ import { useTheme } from "../context/ThemeContext";
 import { colors } from "../colors.js";
 
 
-
-
-
-
-
 const HouseFront = styled.div`
- position: absolute;
-  height: 280px;
-  width: 400px;
+height: 280px;
+width: 400px;
 background-color: ${colors.gray};
-top: 46%;
-right: 33%;
 pointer-events: ${props => props.themeState.dark ? 'none' : ''};
 opacity: ${props => props.themeState.dark ? '0.9' : '1'}; 
+position: relative;
 
 `;
-
-
-
 
 
 const BakeryWindow = styled.button`
@@ -49,14 +39,14 @@ const BakeryWindow = styled.button`
 
     const BakeryWindowLeft = styled(BakeryWindow)`
     position: absolute;
-    top: 1.5em;
-    left: 1.5em;
+    top: 1.5rem;
+    left: 1.5rem;
     `;
 
     const BakeryWindowRight = styled(BakeryWindow)`
     position: absolute;
-    top: 1.5em;
-    right: 1.5em;
+    top: 1.5rem;
+    right: 1.5rem;
     `;
 
 const BakeryDoor = styled.button`
@@ -158,9 +148,6 @@ let isOrderPlaced;
         /**A message like a toast can be shown based on the response */
       console.log(orderData);
       console.log(isOrderPlaced);
-
-
-     
  }
 
 

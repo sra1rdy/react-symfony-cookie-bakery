@@ -51,7 +51,7 @@ const activeTheme = themeState.dark ? theme("dark") : theme("light");
 
 
   return (
-    <BootstrapProvider theme={activeTheme} reset={true} injectGlobal={true}>
+    <BootstrapProvider theme={activeTheme} reset={true}>
     <ThemeContext.Provider
         value={{
           dark: themeState.dark,
